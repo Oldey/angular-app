@@ -1,0 +1,41 @@
+<div class="container">
+  <form novalidate class="form-horizontal" ng-submit="$ctrl.add()">
+    <div class="form-group">
+      <label for="inputName" class="col-xs-2 control-label">Название кампании</label>
+      <div class="col-xs-10">
+        <input type="text" class="form-control" id="inputName" placeholder="Название кампании" ng-model="$ctrl.campaign.name">
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="inputURL" class="col-xs-2 control-label">URL</label>
+      <div class="col-xs-10">
+        <input type="text" class="form-control" id="inputURL" placeholder="URL" ng-model="$ctrl.campaign.url">
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="inputType" class="col-xs-2 control-label">Тип кампании</label>
+      <div class="col-xs-10">
+        <select class="form-control" ng-model="$ctrl.campaign.type">
+          <option value="1">Simple</option>
+          <option value="2">Complicated</option>
+        </select>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="inputCost" class="col-xs-2 control-label">Стоимость (руб.)</label>
+      <div class="col-xs-10">
+        <input type="text" class="form-control" id="inputCost" placeholder="Стоимость" ng-model="$ctrl.campaign.cost">
+      </div>
+    </div>
+    <div class="form-group">
+      <div class="col-xs-offset-2 col-xs-10">
+        <input type="reset" class="btn btn-default" value="Сброс">
+        <input type="submit" class="btn btn-default" value="Отправить">
+      </div>
+    </div>
+  </form>
+  <div class="container">
+    <h4>Preview</h4>
+    <pre>{{$ctrl.campaign | json}}</pre>
+  </div>
+</div>

@@ -1,0 +1,17 @@
+[
+    {
+        "country": "RUSSIA", 
+        "income": 8.90, 
+        "views": 14900
+    }, 
+    {
+        "country": "UNITED STATES OF AMERICA", 
+        "income": 56.23, 
+        "views": 32451
+    },
+	{
+        "country": "CHINA", 
+        "income": 9.0, 
+        "views": 4972
+    }
+]
