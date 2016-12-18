@@ -37,3 +37,14 @@
 }
 
 /* Older browsers might need vendor-prefixes for keyframes and animation! */
+
+/* Example 2 form additional styles */
+.wrong {
+  color: #a94442;
+  background-color: #f2dede;
+  border-color: #ebccd1;
+}
+
+.btn-r {
+  margin-left: 40px;
+}

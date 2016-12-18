@@ -1,4 +1,4 @@
 'use strict';
 
 // Define the `core` module
-angular.module('core', ['core.getData']);
+angular.module('core', ['core.getData', 'core.getDataTwo']);

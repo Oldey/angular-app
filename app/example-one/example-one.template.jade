@@ -1,0 +1,28 @@
+.container-fluid
+  .col-xs-2
+    // Sidebar content
+    form
+      .form-group
+        a.btn.btn-default(href='#!/example-one', ng-click='$ctrl.loadData()') Загрузка данных
+      .form-group
+        label(for='inputQuery') Поиск
+        input#inputQuery.form-control(type='text', placeholder='Фильтр поиска', ng-model='$ctrl.query')
+      .form-group(ng-show='$ctrl.data')
+        label(for='inputOrder') Сортировать
+        select#inputOrder.form-control(ng-model='$ctrl.orderProp')
+          option(value='') Выберите способ сортировки
+          option(value='-income') по доходу
+          option(value='-views') по просмотрам
+  .col-xs-10
+    // Body content
+    table.table.table-bordered.table-hover
+      thead
+        tr
+          th Данные
+          th Доход
+          th Просмотры
+      tbody
+        tr.phone-list-item(ng-repeat='dataElement in $ctrl.data | filter:$ctrl.query | orderBy:$ctrl.orderProp')
+          td {{dataElement.country}}
+          td ${{dataElement.income}}
+          td {{dataElement.views}}

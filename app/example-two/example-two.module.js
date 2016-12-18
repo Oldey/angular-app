@@ -1,6 +1,4 @@
 'use strict';
 
 // Define the `exampleTwo` module
-angular.module('exampleTwo', [
-  
-]);
+angular.module('exampleTwo', ['core.getDataTwo']);

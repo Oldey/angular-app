@@ -13,7 +13,7 @@ angular.
         when('/example-two', {
           template: '<example-two></example-two>'
         }).
-		    when('/', {
+        when('/', {
           template: '<main></main>'
         }).
         otherwise('/');

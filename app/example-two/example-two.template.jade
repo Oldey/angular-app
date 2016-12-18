@@ -1,0 +1,27 @@
+.container
+  form.form-horizontal(novalidate='', ng-submit='$ctrl.add()')
+    .form-group
+      label.col-xs-2.control-label(for='inputName') Название кампании
+      .col-xs-10
+        input#inputName.form-control(type='text', placeholder='Название кампании', ng-class='{wrong: $ctrl.error.name}', ng-model='$ctrl.campaign.name')
+    .form-group
+      label.col-xs-2.control-label(for='inputURL') URL
+      .col-xs-10
+        input#inputURL.form-control(type='text', placeholder='URL', ng-class='{wrong: $ctrl.error.url}', ng-model='$ctrl.campaign.url')
+    .form-group
+      label.col-xs-2.control-label(for='inputType') Тип кампании
+      .col-xs-10
+        select.form-control(ng-class='{wrong: $ctrl.error.type}', ng-model='$ctrl.campaign.type')
+          option(value='1') Simple
+          option(value='2') Complicated
+    .form-group
+      label.col-xs-2.control-label(for='inputCost') Стоимость (руб.)
+      .col-xs-10
+        input#inputCost.form-control(type='text', placeholder='Стоимость', ng-class='{wrong: $ctrl.error.cost}', ng-model='$ctrl.campaign.cost')
+    .form-group
+      .col-xs-offset-2.col-xs-10
+        input.btn.btn-default(type='reset', value='Сброс', ng-click='$ctrl.reset()')
+        input.btn.btn-default.btn-r(type='submit', value='Отправить')
+  .container
+    h4 Server file preview
+    pre {{$ctrl.preview | json}}
